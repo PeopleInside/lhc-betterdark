@@ -5,26 +5,58 @@
   var applyScheduled = false;
   var ignoreNextRootClassMutation = false;
 
+  function getClassTokens(el) {
+    if (!el) return [];
+
+    if (el.classList && typeof el.classList.length === 'number') {
+      return Array.prototype.slice.call(el.classList);
+    }
+
+    return (el.className || '').toString().split(/\s+/).filter(Boolean);
+  }
+
+  function hasClassThemeSignal(el, mode) {
+    var classTokens = getClassTokens(el);
+    var token;
+
+    for (var i = 0; i < classTokens.length; i++) {
+      token = classTokens[i].toLowerCase();
+
+      if (token === betterDarkClass) {
+        continue;
+      }
+
+      if (
+        token === mode ||
+        token.indexOf(mode + '-') === 0 ||
+        token.indexOf('-' + mode) !== -1 ||
+        token.indexOf('theme-' + mode) === 0
+      ) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   function hasDarkSignal(el) {
     if (!el) return false;
 
-    var cls = (el.className || '').toString().toLowerCase();
     var dataTheme = (el.getAttribute('data-theme') || '').toLowerCase();
     var bsTheme = (el.getAttribute('data-bs-theme') || '').toLowerCase();
 
-    return cls.indexOf('dark') !== -1 || dataTheme === 'dark' || bsTheme === 'dark';
+    return hasClassThemeSignal(el, 'dark') || dataTheme === 'dark' || bsTheme === 'dark';
   }
 
   function hasLightSignal(el) {
     if (!el) return false;
 
-    var cls = (el.className || '').toString().toLowerCase();
     var dataTheme = (el.getAttribute('data-theme') || '').toLowerCase();
     var bsTheme = (el.getAttribute('data-bs-theme') || '').toLowerCase();
 
     return (
-      cls.indexOf('light') !== -1 ||
-      cls.indexOf('bright') !== -1 ||
+      hasClassThemeSignal(el, 'light') ||
+      hasClassThemeSignal(el, 'bright') ||
       dataTheme === 'light' ||
       dataTheme === 'bright' ||
       bsTheme === 'light' ||
