@@ -1,0 +1,335 @@
+:root.lhc-betterdark-enabled {
+  --lhc-bg: #12141a;
+  --lhc-surface: #1a1c24;
+  --lhc-surface-2: #222530;
+  --lhc-surface-3: #2a2e3a;
+  --lhc-border: #353a48;
+
+  --lhc-text: #e4e6eb;
+  --lhc-text-soft: #9ea4b2;
+  --lhc-text-dim: #757c8c;
+
+  --lhc-primary: #6b8fb4;
+  --lhc-primary-hover: #5a7a9e;
+  --lhc-link: #8fb8d9;
+
+  --lhc-success: #68b88a;
+  --lhc-warning: #d4a85c;
+  --lhc-danger: #c97a7a;
+  --lhc-info: #7bb8d9;
+
+  color-scheme: dark;
+}
+
+:root.lhc-betterdark-enabled html,
+:root.lhc-betterdark-enabled body,
+:root.lhc-betterdark-enabled body[class*="admin"],
+:root.lhc-betterdark-enabled body[class*="login"],
+:root.lhc-betterdark-enabled body[class*="site_admin"] {
+  background: var(--lhc-bg) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .wrapper,
+:root.lhc-betterdark-enabled .content-wrapper,
+:root.lhc-betterdark-enabled .main-content,
+:root.lhc-betterdark-enabled .container,
+:root.lhc-betterdark-enabled .container-fluid,
+:root.lhc-betterdark-enabled .row,
+:root.lhc-betterdark-enabled #page,
+:root.lhc-betterdark-enabled #wrapper,
+:root.lhc-betterdark-enabled #main-content,
+:root.lhc-betterdark-enabled #lhc-app {
+  background-color: transparent !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .bg-white,
+:root.lhc-betterdark-enabled [class*="bg-white"],
+:root.lhc-betterdark-enabled [class*="white-bg"] {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .card,
+:root.lhc-betterdark-enabled .card-header,
+:root.lhc-betterdark-enabled .card-body,
+:root.lhc-betterdark-enabled .card-footer,
+:root.lhc-betterdark-enabled .panel,
+:root.lhc-betterdark-enabled .panel-default,
+:root.lhc-betterdark-enabled .panel-heading,
+:root.lhc-betterdark-enabled .panel-body,
+:root.lhc-betterdark-enabled .panel-footer,
+:root.lhc-betterdark-enabled .box,
+:root.lhc-betterdark-enabled .box-header,
+:root.lhc-betterdark-enabled .box-body,
+:root.lhc-betterdark-enabled .box-footer,
+:root.lhc-betterdark-enabled .well,
+:root.lhc-betterdark-enabled .modal-content,
+:root.lhc-betterdark-enabled .dropdown-menu,
+:root.lhc-betterdark-enabled .popover,
+:root.lhc-betterdark-enabled .login-box,
+:root.lhc-betterdark-enabled .login-box-body,
+:root.lhc-betterdark-enabled .login-panel {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled .card-header,
+:root.lhc-betterdark-enabled .panel-heading,
+:root.lhc-betterdark-enabled .box-header,
+:root.lhc-betterdark-enabled .modal-header {
+  background: var(--lhc-surface-2) !important;
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled h1,
+:root.lhc-betterdark-enabled h2,
+:root.lhc-betterdark-enabled h3,
+:root.lhc-betterdark-enabled h4,
+:root.lhc-betterdark-enabled h5,
+:root.lhc-betterdark-enabled h6,
+:root.lhc-betterdark-enabled p,
+:root.lhc-betterdark-enabled span,
+:root.lhc-betterdark-enabled div,
+:root.lhc-betterdark-enabled label,
+:root.lhc-betterdark-enabled .control-label,
+:root.lhc-betterdark-enabled .help-block,
+:root.lhc-betterdark-enabled .form-text,
+:root.lhc-betterdark-enabled .text-muted,
+:root.lhc-betterdark-enabled .small,
+:root.lhc-betterdark-enabled small,
+:root.lhc-betterdark-enabled .login-box-msg,
+:root.lhc-betterdark-enabled .login-logo a {
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .text-muted,
+:root.lhc-betterdark-enabled small,
+:root.lhc-betterdark-enabled .help-block,
+:root.lhc-betterdark-enabled .text-secondary {
+  color: var(--lhc-text-soft) !important;
+}
+
+:root.lhc-betterdark-enabled a {
+  color: var(--lhc-link) !important;
+}
+
+:root.lhc-betterdark-enabled a:hover,
+:root.lhc-betterdark-enabled a:focus {
+  color: #b3d0eb !important;
+}
+
+:root.lhc-betterdark-enabled .form-group {
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .form-control,
+:root.lhc-betterdark-enabled input[type="text"],
+:root.lhc-betterdark-enabled input[type="email"],
+:root.lhc-betterdark-enabled input[type="password"],
+:root.lhc-betterdark-enabled input[type="search"],
+:root.lhc-betterdark-enabled input[type="number"],
+:root.lhc-betterdark-enabled input[type="url"],
+:root.lhc-betterdark-enabled input[type="tel"],
+:root.lhc-betterdark-enabled select,
+:root.lhc-betterdark-enabled textarea {
+  background: var(--lhc-surface-2) !important;
+  color: var(--lhc-text) !important;
+  border: 1px solid var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled .form-control::placeholder,
+:root.lhc-betterdark-enabled input::placeholder,
+:root.lhc-betterdark-enabled textarea::placeholder {
+  color: var(--lhc-text-dim) !important;
+  opacity: 1 !important;
+}
+
+:root.lhc-betterdark-enabled .form-control:focus,
+:root.lhc-betterdark-enabled input:focus,
+:root.lhc-betterdark-enabled select:focus,
+:root.lhc-betterdark-enabled textarea:focus {
+  background: var(--lhc-surface-3) !important;
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(107, 143, 180, 0.3) !important;
+}
+
+:root.lhc-betterdark-enabled .input-group-addon,
+:root.lhc-betterdark-enabled .input-group-text {
+  background: var(--lhc-surface-2) !important;
+  color: var(--lhc-text-soft) !important;
+  border-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled .btn {
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+:root.lhc-betterdark-enabled .btn-primary,
+:root.lhc-betterdark-enabled .btn-success,
+:root.lhc-betterdark-enabled button[type="submit"],
+:root.lhc-betterdark-enabled input[type="submit"] {
+  background: var(--lhc-primary) !important;
+  border-color: var(--lhc-primary) !important;
+  color: #fff !important;
+}
+
+:root.lhc-betterdark-enabled .btn-primary:hover,
+:root.lhc-betterdark-enabled .btn-success:hover,
+:root.lhc-betterdark-enabled button[type="submit"]:hover,
+:root.lhc-betterdark-enabled input[type="submit"]:hover {
+  background: var(--lhc-primary-hover) !important;
+  border-color: var(--lhc-primary-hover) !important;
+}
+
+:root.lhc-betterdark-enabled .btn-default,
+:root.lhc-betterdark-enabled .btn-secondary {
+  background: var(--lhc-surface-2) !important;
+  border-color: var(--lhc-border) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled table,
+:root.lhc-betterdark-enabled .table,
+:root.lhc-betterdark-enabled .table-bordered,
+:root.lhc-betterdark-enabled .table-striped,
+:root.lhc-betterdark-enabled .table-hover {
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-border) !important;
+  background: var(--lhc-surface) !important;
+}
+
+:root.lhc-betterdark-enabled .table > thead > tr > th,
+:root.lhc-betterdark-enabled .table > tbody > tr > td,
+:root.lhc-betterdark-enabled .table > tfoot > tr > td {
+  border-color: var(--lhc-border) !important;
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .table-striped > tbody > tr:nth-of-type(odd) {
+  background: #1e212a !important;
+}
+
+:root.lhc-betterdark-enabled .table-hover > tbody > tr:hover {
+  background: #252933 !important;
+}
+
+:root.lhc-betterdark-enabled .nav,
+:root.lhc-betterdark-enabled .nav-tabs,
+:root.lhc-betterdark-enabled .nav-pills,
+:root.lhc-betterdark-enabled .navbar,
+:root.lhc-betterdark-enabled .navbar-default,
+:root.lhc-betterdark-enabled .sidebar,
+:root.lhc-betterdark-enabled .main-sidebar,
+:root.lhc-betterdark-enabled .breadcrumb {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled .nav > li > a,
+:root.lhc-betterdark-enabled .navbar a,
+:root.lhc-betterdark-enabled .breadcrumb a,
+:root.lhc-betterdark-enabled .sidebar a {
+  color: var(--lhc-text-soft) !important;
+}
+
+:root.lhc-betterdark-enabled .nav > li > a:hover,
+:root.lhc-betterdark-enabled .nav > li.active > a,
+:root.lhc-betterdark-enabled .sidebar a:hover,
+:root.lhc-betterdark-enabled .sidebar .active > a {
+  background: var(--lhc-surface-2) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .alert {
+  border-color: var(--lhc-border) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .alert-success {
+  background: rgba(104, 184, 138, 0.15) !important;
+  border-color: rgba(104, 184, 138, 0.35) !important;
+  color: #d0e8d9 !important;
+}
+
+:root.lhc-betterdark-enabled .alert-info {
+  background: rgba(123, 184, 217, 0.15) !important;
+  border-color: rgba(123, 184, 217, 0.35) !important;
+  color: #d4e8f0 !important;
+}
+
+:root.lhc-betterdark-enabled .alert-warning {
+  background: rgba(212, 168, 92, 0.15) !important;
+  border-color: rgba(212, 168, 92, 0.35) !important;
+  color: #f2e6c8 !important;
+}
+
+:root.lhc-betterdark-enabled .alert-danger,
+:root.lhc-betterdark-enabled .alert-error {
+  background: rgba(201, 122, 122, 0.15) !important;
+  border-color: rgba(201, 122, 122, 0.35) !important;
+  color: #f0d8d8 !important;
+}
+
+:root.lhc-betterdark-enabled .modal-header,
+:root.lhc-betterdark-enabled .modal-body,
+:root.lhc-betterdark-enabled .modal-footer {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled .dropdown-menu > li > a {
+  color: var(--lhc-text) !important;
+  background: transparent !important;
+}
+
+:root.lhc-betterdark-enabled .dropdown-menu > li > a:hover {
+  background: var(--lhc-surface-2) !important;
+}
+
+:root.lhc-betterdark-enabled .pagination > li > a,
+:root.lhc-betterdark-enabled .pagination > li > span {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+  border-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled .pagination > .active > a,
+:root.lhc-betterdark-enabled .pagination > .active > span {
+  background: var(--lhc-primary) !important;
+  border-color: var(--lhc-primary) !important;
+  color: #fff !important;
+}
+
+:root.lhc-betterdark-enabled hr {
+  border-top-color: var(--lhc-border) !important;
+}
+
+:root.lhc-betterdark-enabled [style*="background:#fff"],
+:root.lhc-betterdark-enabled [style*="background: #fff"],
+:root.lhc-betterdark-enabled [style*="background-color:#fff"],
+:root.lhc-betterdark-enabled [style*="background-color: #fff"],
+:root.lhc-betterdark-enabled [style*="background:white"],
+:root.lhc-betterdark-enabled [style*="background-color:white"] {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled input:-webkit-autofill,
+:root.lhc-betterdark-enabled input:-webkit-autofill:hover,
+:root.lhc-betterdark-enabled input:-webkit-autofill:focus,
+:root.lhc-betterdark-enabled textarea:-webkit-autofill,
+:root.lhc-betterdark-enabled select:-webkit-autofill {
+  -webkit-text-fill-color: var(--lhc-text) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--lhc-surface-2) inset !important;
+  transition: background-color 9999s ease-out 0s !important;
+  border: 1px solid var(--lhc-border) !important;
+}
