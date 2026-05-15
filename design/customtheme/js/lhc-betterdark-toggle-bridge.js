@@ -22,7 +22,14 @@
     var dataTheme = (el.getAttribute('data-theme') || '').toLowerCase();
     var bsTheme = (el.getAttribute('data-bs-theme') || '').toLowerCase();
 
-    return cls.indexOf('light') !== -1 || dataTheme === 'light' || bsTheme === 'light';
+    return (
+      cls.indexOf('light') !== -1 ||
+      cls.indexOf('bright') !== -1 ||
+      dataTheme === 'light' ||
+      dataTheme === 'bright' ||
+      bsTheme === 'light' ||
+      bsTheme === 'bright'
+    );
   }
 
   function shouldEnableBetterDark() {
