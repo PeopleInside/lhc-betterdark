@@ -194,6 +194,10 @@
   color: var(--lhc-text) !important;
 }
 
+:root.lhc-betterdark-enabled .reactions-holder-admin {
+  background: #7077d1 !important;
+}
+
 :root.lhc-betterdark-enabled table,
 :root.lhc-betterdark-enabled .table,
 :root.lhc-betterdark-enabled .table-bordered,
