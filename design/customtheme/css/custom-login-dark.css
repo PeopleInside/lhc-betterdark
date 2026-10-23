@@ -337,3 +337,119 @@
   transition: background-color 9999s ease-out 0s !important;
   border: 1px solid var(--lhc-border) !important;
 }
+/* Quando l'OS è in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: var(--lhc-bg, #12141a) !important;
+    color: var(--lhc-text, #e4e6eb) !important;
+  }
+
+  body, div, span, p, h1, h2, h3, h4, h5, h6, 
+  blockquote, pre, abbr, address, cite, code, 
+  del, dfn, em, img, ins, kbd, q, samp, small, 
+  strong, sub, sup, var, b, i, dl, dt, dd, ol, 
+  ul, li, fieldset, form, label, legend, table, 
+  caption, tbody, tfoot, thead, tr, th, td, 
+  article, aside, canvas, details, figcaption, 
+  figure, footer, header, hgroup, menu, nav, 
+  section, summary, time, mark, audio, video {
+    background: transparent !important;
+    color: var(--lhc-text, #e4e6eb) !important;
+  }
+
+  .ace-github {
+    background: var(--lhc-surface-2, #222530) !important;
+    color: var(--lhc-text, #e4e6eb) !important;
+  }
+
+  .ace-github .ace_gutter {
+    background: var(--lhc-surface, #1a1c24) !important;
+    color: var(--lhc-text-soft, #9ea4b2) !important;
+  }
+}
+
+/* Quando LHC è in dark mode */
+:root.lhc-betterdark-enabled {
+  background: var(--lhc-bg) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled body,
+:root.lhc-betterdark-enabled div,
+:root.lhc-betterdark-enabled span,
+:root.lhc-betterdark-enabled p,
+:root.lhc-betterdark-enabled h1,
+:root.lhc-betterdark-enabled h2,
+:root.lhc-betterdark-enabled h3,
+:root.lhc-betterdark-enabled h4,
+:root.lhc-betterdark-enabled h5,
+:root.lhc-betterdark-enabled h6,
+:root.lhc-betterdark-enabled blockquote,
+:root.lhc-betterdark-enabled pre,
+:root.lhc-betterdark-enabled abbr,
+:root.lhc-betterdark-enabled address,
+:root.lhc-betterdark-enabled cite,
+:root.lhc-betterdark-enabled code,
+:root.lhc-betterdark-enabled del,
+:root.lhc-betterdark-enabled dfn,
+:root.lhc-betterdark-enabled em,
+:root.lhc-betterdark-enabled img,
+:root.lhc-betterdark-enabled ins,
+:root.lhc-betterdark-enabled kbd,
+:root.lhc-betterdark-enabled q,
+:root.lhc-betterdark-enabled samp,
+:root.lhc-betterdark-enabled small,
+:root.lhc-betterdark-enabled strong,
+:root.lhc-betterdark-enabled sub,
+:root.lhc-betterdark-enabled sup,
+:root.lhc-betterdark-enabled var,
+:root.lhc-betterdark-enabled b,
+:root.lhc-betterdark-enabled i,
+:root.lhc-betterdark-enabled dl,
+:root.lhc-betterdark-enabled dt,
+:root.lhc-betterdark-enabled dd,
+:root.lhc-betterdark-enabled ol,
+:root.lhc-betterdark-enabled ul,
+:root.lhc-betterdark-enabled li,
+:root.lhc-betterdark-enabled fieldset,
+:root.lhc-betterdark-enabled form,
+:root.lhc-betterdark-enabled label,
+:root.lhc-betterdark-enabled legend,
+:root.lhc-betterdark-enabled table,
+:root.lhc-betterdark-enabled caption,
+:root.lhc-betterdark-enabled tbody,
+:root.lhc-betterdark-enabled tfoot,
+:root.lhc-betterdark-enabled thead,
+:root.lhc-betterdark-enabled tr,
+:root.lhc-betterdark-enabled th,
+:root.lhc-betterdark-enabled td,
+:root.lhc-betterdark-enabled article,
+:root.lhc-betterdark-enabled aside,
+:root.lhc-betterdark-enabled canvas,
+:root.lhc-betterdark-enabled details,
+:root.lhc-betterdark-enabled figcaption,
+:root.lhc-betterdark-enabled figure,
+:root.lhc-betterdark-enabled footer,
+:root.lhc-betterdark-enabled header,
+:root.lhc-betterdark-enabled hgroup,
+:root.lhc-betterdark-enabled menu,
+:root.lhc-betterdark-enabled nav,
+:root.lhc-betterdark-enabled section,
+:root.lhc-betterdark-enabled summary,
+:root.lhc-betterdark-enabled time,
+:root.lhc-betterdark-enabled mark,
+:root.lhc-betterdark-enabled audio,
+:root.lhc-betterdark-enabled video {
+  background: transparent !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .ace-github {
+  background: var(--lhc-surface-2) !important;
+  color: var(--lhc-text) !important;
+}
+
+:root.lhc-betterdark-enabled .ace-github .ace_gutter {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text-soft) !important;
+}
