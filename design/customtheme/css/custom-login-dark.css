@@ -337,43 +337,18 @@
   transition: background-color 9999s ease-out 0s !important;
   border: 1px solid var(--lhc-border) !important;
 }
-/* Quando l'OS è in dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    background: var(--lhc-bg, #12141a) !important;
-    color: var(--lhc-text, #e4e6eb) !important;
-  }
-
-  body, div, span, p, h1, h2, h3, h4, h5, h6, 
-  blockquote, pre, abbr, address, cite, code, 
-  del, dfn, em, img, ins, kbd, q, samp, small, 
-  strong, sub, sup, var, b, i, dl, dt, dd, ol, 
-  ul, li, fieldset, form, label, legend, table, 
-  caption, tbody, tfoot, thead, tr, th, td, 
-  article, aside, canvas, details, figcaption, 
-  figure, footer, header, hgroup, menu, nav, 
-  section, summary, time, mark, audio, video {
-    background: transparent !important;
-    color: var(--lhc-text, #e4e6eb) !important;
-  }
-
-  .ace-github {
-    background: var(--lhc-surface-2, #222530) !important;
-    color: var(--lhc-text, #e4e6eb) !important;
-  }
-
-  .ace-github .ace_gutter {
-    background: var(--lhc-surface, #1a1c24) !important;
-    color: var(--lhc-text-soft, #9ea4b2) !important;
-  }
-}
-
-/* Quando LHC è in dark mode */
-:root.lhc-betterdark-enabled {
-  background: var(--lhc-bg) !important;
+/* Editor ACE */
+:root.lhc-betterdark-enabled .ace-github {
+  background: var(--lhc-surface-2) !important;
   color: var(--lhc-text) !important;
 }
 
+:root.lhc-betterdark-enabled .ace-github .ace_gutter {
+  background: var(--lhc-surface) !important;
+  color: var(--lhc-text-soft) !important;
+}
+
+/* Reset elementi base - solo quando LHC è in dark mode */
 :root.lhc-betterdark-enabled body,
 :root.lhc-betterdark-enabled div,
 :root.lhc-betterdark-enabled span,
@@ -442,14 +417,4 @@
 :root.lhc-betterdark-enabled video {
   background: transparent !important;
   color: var(--lhc-text) !important;
-}
-
-:root.lhc-betterdark-enabled .ace-github {
-  background: var(--lhc-surface-2) !important;
-  color: var(--lhc-text) !important;
-}
-
-:root.lhc-betterdark-enabled .ace-github .ace_gutter {
-  background: var(--lhc-surface) !important;
-  color: var(--lhc-text-soft) !important;
 }
