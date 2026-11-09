@@ -6,7 +6,7 @@ Plugin-style custom theme override for **LiveHelperChat** that:
 - keeps compatibility with LHC native dark mode,
 - disables the custom dark layer when native UI is explicitly in light mode.
 
-Disclaimer
+## Disclaimer
 This software is provided "AS IS", without any warranty. While it has been tested and reasonable efforts are made to ensure security and reliability, no guarantees are provided. As an open project, anyone may contribute or report issues, but this does not imply endorsement or liability from the maintainers.
 
 You use this software entirely at your own risk. The authors and contributors are not liable for any damages, data loss, or unexpected behavior resulting from its use, modification, or distribution. Always review and test the code independently before deploying it in critical or production environments.
