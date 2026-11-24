@@ -1,0 +1,107 @@
+/* ==========================================================================
+   lhc-betterdark: Dark Mode SOLO per la pagina di chat standalone / offline
+   Il selettore :has() garantisce che NON venga applicato al widget o all'admin.
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Applica lo sfondo scuro solo se nella pagina è presente il form di avvio chat o il form offline */
+    body:has(#form-start-chat) {
+        background-color: #1e1e1e !important;
+        color: #e0e0e0 !important;
+    }
+
+    /* Contenitori principali della pagina standalone / offline */
+    body:has(#form-start-chat) .container,
+    body:has(#form-start-chat) .row,
+    body:has(#form-start-chat) .col-md-6,
+    body:has(#form-start-chat) .col-6,
+    body:has(#form-start-chat) .form-group {
+        background-color: transparent !important;
+    }
+
+    /* Card o contenitori del form (inclusi sfondi chiari di Bootstrap) */
+    body:has(#form-start-chat) .card,
+    body:has(#form-start-chat) .p-3,
+    body:has(#form-start-chat) .p-4,
+    body:has(#form-start-chat) .border,
+    body:has(#form-start-chat) .bg-light {
+        background-color: #252525 !important;
+        border-color: #444444 !important;
+        color: #e0e0e0 !important;
+    }
+
+    /* Campi di input nella pagina standalone / offline */
+    body:has(#form-start-chat) .form-control,
+    body:has(#form-start-chat) .form-select,
+    body:has(#form-start-chat) input[type="text"],
+    body:has(#form-start-chat) input[type="email"],
+    body:has(#form-start-chat) input[type="tel"],
+    body:has(#form-start-chat) textarea {
+        background-color: #333333 !important;
+        color: #e0e0e0 !important;
+        border-color: #555555 !important;
+    }
+
+    body:has(#form-start-chat) .form-control:focus,
+    body:has(#form-start-chat) .form-select:focus,
+    body:has(#form-start-chat) input[type="text"]:focus,
+    body:has(#form-start-chat) input[type="email"]:focus,
+    body:has(#form-start-chat) textarea:focus {
+        background-color: #333333 !important;
+        color: #e0e0e0 !important;
+        border-color: #0d6efd !important;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+    }
+
+    /* Pulsanti nella pagina standalone / offline */
+    body:has(#form-start-chat) .btn-primary {
+        background-color: #0d6efd !important;
+        border-color: #0d6efd !important;
+        color: #ffffff !important;
+    }
+
+    body:has(#form-start-chat) .btn-primary:hover {
+        background-color: #0b5ed7 !important;
+        border-color: #0a58ca !important;
+    }
+
+    body:has(#form-start-chat) .btn-secondary,
+    body:has(#form-start-chat) .btn-outline-secondary {
+        background-color: #444444 !important;
+        border-color: #555555 !important;
+        color: #e0e0e0 !important;
+    }
+
+    /* Testi, titoli e link */
+    body:has(#form-start-chat) h1,
+    body:has(#form-start-chat) h2,
+    body:has(#form-start-chat) h3,
+    body:has(#form-start-chat) h4,
+    body:has(#form-start-chat) h5,
+    body:has(#form-start-chat) h6,
+    body:has(#form-start-chat) .offline-intro {
+        color: #e0e0e0 !important;
+    }
+
+    body:has(#form-start-chat) a {
+        color: #6ea8fe !important;
+    }
+
+    body:has(#form-start-chat) .text-muted {
+        color: #adb5bd !important;
+    }
+
+    /* Label dei form */
+    body:has(#form-start-chat) label,
+    body:has(#form-start-chat) .col-form-label {
+        color: #e0e0e0 !important;
+    }
+
+    /* Messaggi di errore o validazione */
+    body:has(#form-start-chat) .alert-danger,
+    body:has(#form-start-chat) .invalid-feedback {
+        background-color: #3c1518 !important;
+        color: #f8d7da !important;
+        border-color: #842029 !important;
+    }
+}
