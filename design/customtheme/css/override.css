@@ -1,0 +1,219 @@
+/* ==========================================================================
+   lhc-betterdark v4.0 — Dark Mode "Blu Ardesia" a variabili
+   Solo pagina standalone / offline (guardie: prefers-color-scheme + :has()).
+   Palette e stratificazione prese dall'esempio lhc-betterdark-enabled:
+   bg #12141a → surface #1a1c24 → surface-2 #222530 (input) → surface-3 #2a2e3a (focus)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  html:is(:has(#form-start-chat), :has(#lhc_form_offline)) {
+    color-scheme: dark;
+
+    /* ---- Superfici (4 livelli di elevazione, tutti con tinta blu) ---- */
+    --lhc-bg:        #12141a;
+    --lhc-surface:   #1a1c24;
+    --lhc-surface-2: #222530;
+    --lhc-surface-3: #2a2e3a;
+    --lhc-border:    #353a48;
+    --lhc-border-soft: #2a2e3a;
+
+    /* ---- Testi ---- */
+    --lhc-text:      #e4e6eb;
+    --lhc-text-soft: #9ea4b2;
+    --lhc-text-dim:  #757c8c;
+
+    /* ---- Accenti (steel blue desaturato, niente blu neon) ---- */
+    --lhc-primary:       #6b8fb4;
+    --lhc-primary-hover: #5a7a9e;
+    --lhc-primary-ring:  rgba(107, 143, 180, 0.35);
+    --lhc-link:          #8fb8d9;
+    --lhc-link-hover:    #b3d0eb;
+
+    /* ---- Stato ---- */
+    --lhc-danger:        #c97a7a;
+    --lhc-danger-bg:     rgba(201, 122, 122, 0.12);
+    --lhc-danger-border: rgba(201, 122, 122, 0.35);
+
+    /* ================= BASE ================= */
+    & body {
+      background: var(--lhc-bg) !important;
+      color: var(--lhc-text) !important;
+    }
+
+    & .container, & .container-fluid, & .row,
+    & .col-md-6, & .col-6, & .col-12, & .form-group,
+    & .wrapper, & .content-wrapper {
+      background-color: transparent !important;
+      color: var(--lhc-text) !important;
+    }
+
+    /* ================= SUPERFICI / CARD ================= */
+    & .card, & .panel, & .well, & .box,
+    & .modal-content, & .dropdown-menu, & .popover,
+    & .bg-white, & .bg-light, & [class*="bg-white"], & [class*="white-bg"] {
+      background: var(--lhc-surface) !important;
+      color: var(--lhc-text) !important;
+      border-color: var(--lhc-border) !important;
+    }
+
+    & .card-header, & .panel-heading, & .box-header, & .modal-header {
+      background: var(--lhc-surface-2) !important;
+      border-color: var(--lhc-border) !important;
+      color: var(--lhc-text) !important;
+    }
+
+    /* ================= TESTI ================= */
+    & h1, & h2, & h3, & h4, & h5, & h6,
+    & p, & span, & div, & label, & .control-label,
+    & .col-form-label, & .offline-intro {
+      color: var(--lhc-text) !important;
+    }
+
+    & .text-muted, & small, & .small,
+    & .help-block, & .form-text, & .text-secondary {
+      color: var(--lhc-text-soft) !important;
+    }
+
+    & a {
+      color: var(--lhc-link) !important;
+      text-decoration: none;
+    }
+    & a:hover, & a:focus {
+      color: var(--lhc-link-hover) !important;
+      text-decoration: underline;
+    }
+
+    /* ================= INPUT ================= */
+    & .form-control, & .form-select,
+    & input[type="text"], & input[type="email"],
+    & input[type="tel"], & input[type="search"],
+    & input[type="number"], & input[type="url"],
+    & input[type="password"], & select, & textarea {
+      background: var(--lhc-surface-2) !important;
+      color: var(--lhc-text) !important;
+      border: 1px solid var(--lhc-border) !important;
+    }
+
+    & .form-control::placeholder,
+    & input::placeholder, & textarea::placeholder {
+      color: var(--lhc-text-dim) !important;
+      opacity: 1 !important;
+    }
+
+    & select option {
+      background: var(--lhc-surface-2) !important;
+      color: var(--lhc-text) !important;
+    }
+
+    & .input-group-addon, & .input-group-text {
+      background: var(--lhc-surface-2) !important;
+      color: var(--lhc-text-soft) !important;
+      border-color: var(--lhc-border) !important;
+    }
+
+    & .form-control:focus, & .form-select:focus,
+    & input:focus, & select:focus, & textarea:focus {
+      background: var(--lhc-surface-3) !important;
+      color: var(--lhc-text) !important;
+      border-color: var(--lhc-primary) !important;
+      box-shadow: 0 0 0 0.2rem var(--lhc-primary-ring) !important;
+      outline: none;
+    }
+
+    & input[type="checkbox"], & input[type="radio"] {
+      accent-color: var(--lhc-primary);
+      width: 1.05rem;
+      height: 1.05rem;
+    }
+
+    /* ================= PULSANTI ================= */
+    & .btn {
+      border-color: transparent;
+      color: #fff;
+    }
+
+    & .btn-primary, & button[type="submit"], & input[type="submit"] {
+      background: var(--lhc-primary) !important;
+      border-color: var(--lhc-primary) !important;
+      color: #fff !important;
+    }
+    & .btn-primary:hover, & button[type="submit"]:hover,
+    & input[type="submit"]:hover {
+      background: var(--lhc-primary-hover) !important;
+      border-color: var(--lhc-primary-hover) !important;
+    }
+
+    & .btn-secondary, & .btn-default, & .btn-outline-secondary {
+      background: var(--lhc-surface-2) !important;
+      border-color: var(--lhc-border) !important;
+      color: var(--lhc-text) !important;
+    }
+    & .btn-secondary:hover, & .btn-outline-secondary:hover {
+      background: var(--lhc-surface-3) !important;
+      color: #fff !important;
+    }
+
+    /* ================= BARRA SUPERIORE (X + globo lingue) ================= */
+    & .btn-close, & [class*="close"], & [class*="lang"],
+    & [class*="globe"], & header button, & header a {
+      background: var(--lhc-surface-2) !important;
+      border: 1px solid var(--lhc-border) !important;
+      color: var(--lhc-text-soft) !important;
+    }
+    & .btn-close:hover, & [class*="close"]:hover, & [class*="lang"]:hover {
+      background: var(--lhc-surface-3) !important;
+      color: var(--lhc-text) !important;
+    }
+    /* La X di Bootstrap è una SVG nera: invertiamola */
+    & .btn-close { filter: invert(1); opacity: 0.7; }
+    & .btn-close:hover { opacity: 1; }
+
+    /* ================= ERRORI ================= */
+    & .alert-danger, & .alert-error, & .invalid-feedback {
+      background: var(--lhc-danger-bg) !important;
+      border-color: var(--lhc-danger-border) !important;
+      color: #f0d8d8 !important;
+    }
+
+    /* ================= FIX MACCHIE BIANCHE/GRIGIE ================= */
+    /* Stili inline del template che forzano bianco */
+    & [style*="background:#fff"], & [style*="background: #fff"],
+    & [style*="background-color:#fff"], & [style*="background-color: #fff"],
+    & [style*="background:white"], & [style*="background: white"],
+    & [style*="background-color:white"], & [style*="background-color: white"] {
+      background: var(--lhc-surface) !important;
+      color: var(--lhc-text) !important;
+    }
+
+    /* Autofill Chrome/Edge: era questo il "grigio/avorio" residuo */
+    & input:-webkit-autofill,
+    & input:-webkit-autofill:hover,
+    & input:-webkit-autofill:focus,
+    & textarea:-webkit-autofill,
+    & select:-webkit-autofill {
+      -webkit-text-fill-color: var(--lhc-text) !important;
+      -webkit-box-shadow: 0 0 0 1000px var(--lhc-surface-2) inset !important;
+      caret-color: var(--lhc-text) !important;
+      transition: background-color 9999s ease-out 0s !important;
+      border: 1px solid var(--lhc-border) !important;
+    }
+
+    & hr { border-top-color: var(--lhc-border) !important; }
+
+    /* ================= SELEZIONE + SCROLLBAR ================= */
+    & ::selection {
+      background: var(--lhc-primary) !important;
+      color: #fff !important;
+    }
+
+    &::-webkit-scrollbar { width: 12px; height: 12px; }
+    &::-webkit-scrollbar-track { background: var(--lhc-bg); }
+    &::-webkit-scrollbar-thumb {
+      background: var(--lhc-border);
+      border-radius: 8px;
+      border: 3px solid var(--lhc-bg);
+    }
+    &::-webkit-scrollbar-thumb:hover { background: var(--lhc-surface-3); }
+  }
+}
